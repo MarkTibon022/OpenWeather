@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/output.css" />
+    <link
+      rel="stylesheet"
+      href="/assets/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css"
+    />
+    <title>OpenWeather</title>
+  </head>
+  <body class="bg-[#e2e8f0] dark:bg-[#121212] duration-150">
+    <div class="px-5 lg:container lg:mx-auto">
+      <nav class="backdrop:blur bg-[#e2e8f0]/30 dark:bg-[#121212]/30">
+        <div class="mx-auto sm:px-4 lg:px-8">
+          <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex justify-center items-center space-x-3.5">
+              <img
+                class="w-[50px] h-[50px]"
+                src="/assets/image/navLogo.png"
+                alt=""
+              />
+              <h1
+                class="text-[#121212] font-semibold lg:text-4xl md:text-3xl text-[20px] dark:text-[#edf2f7]"
+              >
+                OpenWeather
+              </h1>
+            </div>
+            <div
+              id="Dark-Toggle"
+              class="text-[#647287] text-1xl cursor-pointer dark:text-[#edf2f7]"
+            >
+              <i class="bi bi-brightness-high"></i>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <div class="flex justify-center pt-5">
+          <h1 class="text-4xl font-semibold dark:text-[#edf2f7]">
+            Open <span class="text-[#2d3748] dark:text-[#a0aec0]">Weather</span>
+          </h1>
+        </div>
+
+        <div
+          class="w-full rounded-lg px-2 py-1 mt-3 bg-[#ffffff] dark:bg-[#1f1f1f] shadow-lg text-md flex"
+        >
+          <button
+            onclick="GetWeather()"
+            for=""
+            class="left-3 top-3 text-2xl cursor-pointer p-2 text-gray-400 dark:text-white"
+          >
+            <i class="bi bi-search"></i>
+          </button>
+          <input
+            autocomplete="off"
+            id="search-weather"
+            class="w-full focus:outline-none text-2xl text-gray-600 font-semibold dark:text-white"
+            type="text"
+            placeholder="Enter City"
+          />
+        </div>
+
+        <div id="container-weather" class="mt-10"></div>
+      </main>
+    </div>
+  </body>
+  <script src="/function.js"></script>
+</html>
